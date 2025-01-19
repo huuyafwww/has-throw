@@ -12,7 +12,7 @@ describe('hasThrow for function', () => {
 
   it('should return false if function does not throw', () => {
     const fn = () => {};
-    expect(hasThrow(() => fn)).toBeFalsy();
+    expect(hasThrow(() => fn())).toBeFalsy();
   });
 
   it('should return true if function with argument throws', () => {

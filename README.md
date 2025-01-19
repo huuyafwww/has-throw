@@ -43,7 +43,7 @@ test('should return true if function throws', () => {
 
 test('should return false if function does not throw', () => {
   const fn = () => {};
-  expect(hasThrow(() => fn)).toBeFalsy();
+  expect(hasThrow(() => fn())).toBeFalsy();
 });
 ```
 
@@ -61,7 +61,7 @@ test('should return true if function throws', () => {
 
 test('should return false if function does not throw', () => {
   const fn = () => {};
-  expect(hasThrow(() => fn)).toBeFalsy();
+  expect(hasThrow(() => fn())).toBeFalsy();
 });
 ```
 
