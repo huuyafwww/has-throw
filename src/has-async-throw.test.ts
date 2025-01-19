@@ -3,31 +3,31 @@ import { describe, it, expect } from 'vitest';
 import { hasAsyncThrow } from './has-async-throw';
 
 describe('hasThrow for function', () => {
-  it('should return true if function throws', async () => {
+  it('should return true if function throws', () => {
     // eslint-disable-next-line @typescript-eslint/require-await
     const fn = async () => {
       throw new Error();
     };
-    await expect(hasAsyncThrow(async () => await fn())).resolves.toStrictEqual(true);
+    return expect(hasAsyncThrow(async () => await fn())).resolves.toStrictEqual(true);
   });
 
-  it('should return false if function does not throw', async () => {
+  it('should return false if function does not throw', () => {
     const fn = async () => {};
-    await expect(hasAsyncThrow(async () => await fn())).resolves.toStrictEqual(false);
+    return expect(hasAsyncThrow(async () => await fn())).resolves.toStrictEqual(false);
   });
 
-  it('should return true if function with argument throws', async () => {
+  it('should return true if function with argument throws', () => {
     // eslint-disable-next-line @typescript-eslint/require-await, @typescript-eslint/no-unused-vars
     const fn = async (arg: number) => {
       throw new Error();
     };
-    await expect(hasAsyncThrow(async () => await fn(0))).resolves.toStrictEqual(true);
+    return expect(hasAsyncThrow(async () => await fn(0))).resolves.toStrictEqual(true);
   });
 
-  it('should return false if function with argument does not throw', async () => {
+  it('should return false if function with argument does not throw', () => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const fn = async (arg: number) => {};
-    await expect(hasAsyncThrow(async () => await fn(0))).resolves.toStrictEqual(false);
+    return expect(hasAsyncThrow(async () => await fn(0))).resolves.toStrictEqual(false);
   });
 });
 
@@ -41,14 +41,14 @@ describe('hasThrow for class methods', () => {
     async noThrow() {}
   }
 
-  it('should return true if method throws', async () => {
+  it('should return true if method throws', () => {
     const instance = new MyTestClass();
-    await expect(hasAsyncThrow(async () => await instance.throw())).resolves.toStrictEqual(true);
+    return expect(hasAsyncThrow(async () => await instance.throw())).resolves.toStrictEqual(true);
   });
 
-  it('should return false if method does not throw', async () => {
+  it('should return false if method does not throw', () => {
     const instance = new MyTestClass();
-    await expect(hasAsyncThrow(async () => await instance.noThrow())).resolves.toStrictEqual(false);
+    return expect(hasAsyncThrow(async () => await instance.noThrow())).resolves.toStrictEqual(false);
   });
 });
 
@@ -63,13 +63,13 @@ describe('hasThrow for class methods with arguments', () => {
     async noThrow(arg: number) {}
   }
 
-  it('should return true if method throws', async () => {
+  it('should return true if method throws', () => {
     const instance = new MyTestClass();
-    await expect(hasAsyncThrow(async () => await instance.throw(0))).resolves.toStrictEqual(true);
+    return expect(hasAsyncThrow(async () => await instance.throw(0))).resolves.toStrictEqual(true);
   });
 
-  it('should return false if method does not throw', async () => {
+  it('should return false if method does not throw', () => {
     const instance = new MyTestClass();
-    await expect(hasAsyncThrow(async () => await instance.noThrow(0))).resolves.toStrictEqual(false);
+    return expect(hasAsyncThrow(async () => await instance.noThrow(0))).resolves.toStrictEqual(false);
   });
 });
