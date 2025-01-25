@@ -1,5 +1,11 @@
 # has-throw
 
+## 1.0.2
+
+### Patch Changes
+
+- [#8](https://github.com/huuyafwww/has-throw/pull/8) [`eea6637`](https://github.com/huuyafwww/has-throw/commit/eea66371411db80236ea4a98587b96b0220b5c23) Thanks [@huuyafwww](https://github.com/huuyafwww)! - update devDependencies and add keywords setting
+
 ## 1.0.1
 
 ### Patch Changes
