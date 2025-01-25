@@ -1,5 +1,3 @@
-import { describe, it, expect } from 'vitest';
-
 import { hasAsyncThrow } from './has-async-throw';
 
 describe('hasThrow for function', () => {
@@ -31,7 +29,7 @@ describe('hasThrow for function', () => {
   });
 });
 
-describe('hasThrow for class methods', () => {
+describe('hasAsyncThrow for class methods', () => {
   class MyTestClass {
     // eslint-disable-next-line @typescript-eslint/require-await
     async throw() {
@@ -52,7 +50,7 @@ describe('hasThrow for class methods', () => {
   });
 });
 
-describe('hasThrow for class methods with arguments', () => {
+describe('hasAsyncThrow for class methods with arguments', () => {
   class MyTestClass {
     // eslint-disable-next-line @typescript-eslint/require-await, @typescript-eslint/no-unused-vars
     async throw(arg: number) {

@@ -6,10 +6,12 @@ Provides a helper to test if Throw occurs in javascript or typescript.
 
 ## Features
 
+- [x] Zero dependency.
 - [x] Fully compatible with TypeScript.
 - [x] Supports both ESM (ES Modules) and CommonJS module systems.
 - [x] Works with both synchronous and asynchronous functions.
 - [x] Supports both functions and class methods, with or without arguments.
+- [x] Sample code tested to work with both jest and vitest.
 
 ## Installation
 

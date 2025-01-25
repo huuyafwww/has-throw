@@ -6,7 +6,8 @@
   "compilerOptions": {
     "types": [
       "@types/node",
-      "vitest/globals"
+      "vitest/globals",
+      "jest",
     ],
     "noUnusedParameters": false,
   },
