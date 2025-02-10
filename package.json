@@ -44,7 +44,6 @@
     "clean": "rimraf node_modules",
     "lint:code": "eslint . --cache",
     "lint:type": "tsc --pretty --noEmit",
-    "prepare": "husky",
     "sort:package": "sort-package-json",
     "test": "npm-run-all --parallel test:*",
     "test:jest": "jest",
