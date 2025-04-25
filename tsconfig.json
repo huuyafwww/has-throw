@@ -10,5 +10,7 @@
       "jest",
     ],
     "noUnusedParameters": false,
+    "resolvePackageJsonExports": false,
+    "resolvePackageJsonImports": false,
   },
 }
