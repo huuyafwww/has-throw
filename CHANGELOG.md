@@ -1,5 +1,11 @@
 # has-throw
 
+## 1.0.3
+
+### Patch Changes
+
+- [#14](https://github.com/huuyafwww/has-throw/pull/14) [`57fd3c7`](https://github.com/huuyafwww/has-throw/commit/57fd3c70023fb4f8aba208dc3657a923eeb3d6b1) Thanks [@huuyafwww](https://github.com/huuyafwww)! - update dependencies
+
 ## 1.0.2
 
 ### Patch Changes
